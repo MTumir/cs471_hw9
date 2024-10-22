@@ -86,6 +86,8 @@ public class HerokuApplication {
       model.put("message", e.getMessage());
       return "error";
     }
+
+    System.out.println("You're currently in db, Max Tumir!");
   }
 
   @Bean
