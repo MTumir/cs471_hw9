@@ -80,14 +80,14 @@ public class HerokuApplication {
         output.add("Read from DB: " + rs.getTimestamp("tick") + " " + rs.getString("random_string"));
       }
 
+      System.out.println("You're currently in db, Max Tumir!");
+
       model.put("records", output);
       return "db";
     } catch (Exception e) {
       model.put("message", e.getMessage());
       return "error";
     }
-
-    System.out.println("You're currently in db, Max Tumir!");
   }
 
   @Bean
